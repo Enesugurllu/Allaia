@@ -1,8 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
 
-const News = () => {
-  const newsItems = [
+interface NewsItem {
+  id: number;
+  title: string;
+  content: string;
+  date: string;
+  author: string;
+  image: string;
+}
+
+const News: React.FC = () => {
+  const newsItems: NewsItem[] = [
     {
       id: 1,
       title: "Pri oportere scribentur eu",

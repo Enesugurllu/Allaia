@@ -1,12 +1,12 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 
-const ScrollToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
+const ScrollToTop: React.FC = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   // Scroll durumunu kontrol et
   useEffect(() => {
-    const toggleVisibility = () => {
+    const toggleVisibility = (): void => {
       if (window.pageYOffset > 300) {
         setIsVisible(true);
       } else {
@@ -22,7 +22,7 @@ const ScrollToTop = () => {
   }, []);
 
   // Yukarı çık fonksiyonu
-  const scrollToTop = () => {
+  const scrollToTop = (): void => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <div className="bg-[#1B2434]">
       <div className="px-6 md:px-12 lg:px-24">

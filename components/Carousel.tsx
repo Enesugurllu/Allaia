@@ -2,13 +2,13 @@
 
 import React, { useEffect, useRef, useState } from "react";
 
-const Carousel = () => {
-  const sliderRef = useRef(null); // Slider div için ref
-  const [currentIndex, setCurrentIndex] = useState(0); // Geçerli slayt indexi
-  const totalSlides = 3; // Toplam slayt sayısı
+const Carousel: React.FC = () => {
+  const sliderRef = useRef<HTMLDivElement | null>(null); // Slider div için ref
+  const [currentIndex, setCurrentIndex] = useState<number>(0); // Geçerli slayt indexi
+  const totalSlides: number = 3; // Toplam slayt sayısı
 
   // Slaytları gösteren fonksiyon
-  const showSlide = (index) => {
+  const showSlide = (index: number): void => {
     if (sliderRef.current) {
       const slider = sliderRef.current;
       slider.style.transform = `translateX(-${index * 100}%)`;
@@ -16,7 +16,7 @@ const Carousel = () => {
   };
 
   // Bir sonraki slayta geçiş
-  const nextSlide = () => {
+  const nextSlide = (): void => {
     const newIndex = (currentIndex + 1) % totalSlides;
     setCurrentIndex(newIndex);
     showSlide(newIndex);

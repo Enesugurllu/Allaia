@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
 
-const Card = () => {
+const Card: React.FC = () => {
   return (
     <>
   <meta charSet="utf-8" />

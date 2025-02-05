@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Menu = () => {
+const Menu: React.FC = () => {
   return (
     <>
   <meta charSet="UTF-8" />
@@ -58,10 +58,11 @@ const Menu = () => {
         <i className="fas fa-user text-2xl cursor-pointer icon-hover" />
         <div className="profile-menu absolute right-0 w-48 bg-white border border-gray-200 shadow-lg hidden z-10">
           <a
-            href="#"
+            href="/Sign"
             className="block px-4 py-4 text-white bg-blue-600 hover:bg-yellow-500 login-button"
           >
             Giriş Yap
+
           </a>
           <div className="border-t border-gray-200" />
           <a

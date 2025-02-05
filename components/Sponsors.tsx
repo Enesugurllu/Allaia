@@ -2,10 +2,16 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-const Sponsors = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+interface Sponsor {
+  id: number;
+  image: string;
+  alt: string;
+}
+
+const Sponsors: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
   
-  const sponsors = [
+  const sponsors: Sponsor[] = [
     { id: 1, image: '/image/adidas.png', alt: 'Adidas' },
     { id: 2, image: '/image/nike.png', alt: 'Nike' },
     { id: 3, image: '/image/puma.png', alt: 'Puma' },

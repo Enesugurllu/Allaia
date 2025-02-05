@@ -1,8 +1,18 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Featured = () => {
-  const featuredProducts = [
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  oldPrice?: number;
+  rating: number;
+  image: string;
+  tag?: string;
+}
+
+const Featured: React.FC = () => {
+  const featuredProducts: Product[] = [
     {
       id: 1,
       name: "ACG React Terra",
@@ -10,7 +20,6 @@ const Featured = () => {
       rating: 4,
       image: "/image/1.png",
       tag: "NEW"
-
     },
     {
       id: 2,
@@ -19,7 +28,6 @@ const Featured = () => {
       rating: 4,
       image: "/image/2.png",
       tag: "NEW"
-
     },
     {
       id: 3,
@@ -28,7 +36,6 @@ const Featured = () => {
       rating: 4,
       image: "/image/3.png",
       tag: "HOT"
-
     },
     {
       id: 4,
@@ -40,7 +47,6 @@ const Featured = () => {
       tag: "-30%"
     }
   ];
-
 
   return (
     <div className="container mx-auto py-12 bg-white">

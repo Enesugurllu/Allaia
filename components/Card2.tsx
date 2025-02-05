@@ -2,7 +2,7 @@
 import React from 'react';
 import styles from './Card2.module.css';
 
-const Card2 = () => {
+const Card2: React.FC = () => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.backgroundImage}></div>

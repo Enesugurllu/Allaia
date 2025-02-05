@@ -2,7 +2,7 @@
 
 import React from 'react'
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
     
   return (
     <>

@@ -1,10 +1,22 @@
 'use client'
 import React, { useState } from 'react';
 
-const Products = () => {
-  const [showMore, setShowMore] = useState(false);
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  oldPrice: number | null;
+  discount: string | null;
+  image: string;
+  rating: number;
+  timer?: string;
+  status?: 'NEW' | 'HOT';
+}
 
-  const initialProducts = [
+const Products: React.FC = () => {
+  const [showMore, setShowMore] = useState<boolean>(false);
+
+  const initialProducts: Product[] = [
     {
       id: 1,
       name: "Armor Air x Fear",
@@ -94,7 +106,7 @@ const Products = () => {
     }
   ];
 
-  const additionalProducts = [
+  const additionalProducts: Product[] = [
     {
       id: 9,
       name: "Armor Air Max Plus",
@@ -117,7 +129,7 @@ const Products = () => {
     }
   ];
 
-  const displayedProducts = showMore 
+  const displayedProducts: Product[] = showMore 
     ? [...initialProducts, ...additionalProducts]
     : initialProducts;
 
