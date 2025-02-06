@@ -1,14 +1,24 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import './Kaydol.css';
 
+type UserType = 'private' | 'company';
 
-const Kaydol = () => {
-  const [userType, setUserType] = useState('private');
+const Kaydol: React.FC = () => {
+  const [userType, setUserType] = useState<UserType>('private');
+
+  const handleUserTypeChange = (e: ChangeEvent<HTMLInputElement>): void => {
+    setUserType(e.target.value as UserType);
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
+    e.preventDefault();
+    // Form gönderme işlemleri burada yapılacak
+  };
 
   return (
     <div className="register-container">
-      <form className="register-form">
+      <form className="register-form" onSubmit={handleSubmit}>
         <input 
           type="email" 
           placeholder="Email*" 
@@ -30,7 +40,7 @@ const Kaydol = () => {
               name="userType"
               value="private"
               checked={userType === 'private'}
-              onChange={(e) => setUserType(e.target.value)}
+              onChange={handleUserTypeChange}
             />
             Private
           </label>
@@ -40,7 +50,7 @@ const Kaydol = () => {
               name="userType"
               value="company"
               checked={userType === 'company'}
-              onChange={(e) => setUserType(e.target.value)}
+              onChange={handleUserTypeChange}
             />
             Company
           </label>

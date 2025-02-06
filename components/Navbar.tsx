@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
     </div>
     <div className="menu-items flex space-x-6 text-sm">
       <div className="relative group">
-        <button className="flex items-center">
+        <button onClick={() => window.location.href = '/'} className="flex items-center">
           HOME
           <i className="fas fa-chevron-down ml-1 chevron-down transition-transform duration-300"></i>
         </button>
