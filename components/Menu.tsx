@@ -55,7 +55,9 @@ const Menu: React.FC = () => {
     </div>
     <div className="flex items-center space-x-4">
       <div className="relative profile-dropdown">
-        <i className="fas fa-user text-2xl cursor-pointer icon-hover" />
+        <a href="/Sign">
+          <i className="fas fa-user text-2xl cursor-pointer icon-hover" />
+        </a>
         <div className="profile-menu absolute right-0 w-48 bg-white border border-gray-200 shadow-lg hidden z-10">
           <a
             href="/Sign"
@@ -96,7 +98,9 @@ const Menu: React.FC = () => {
       </div>
       <i className="fas fa-heart text-2xl cursor-pointer icon-hover" />
       <div className="relative cart-dropdown">
-        <i className="fas fa-shopping-bag text-2xl cursor-pointer icon-hover" />
+        <a href="/Cart">
+          <i className="fas fa-shopping-bag text-2xl cursor-pointer icon-hover" />
+        </a>
         <span className="absolute top-0 right-0 bg-blue-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
           2
         </span>
