@@ -17,12 +17,12 @@ const page = () => {
       <Navbar/>
       <Menu/>
       <Carousel/>
-      <Featured/>
       <Card/>
       <Products/>
       <Card2/>
-      <News/>
+      <Featured/>
       <Sponsors/>
+      <News/>
       <Footer/>
       <ScrollToTop/>
     </>
