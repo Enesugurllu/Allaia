@@ -96,7 +96,9 @@ const Menu: React.FC = () => {
           </a>
         </div>
       </div>
-      <i className="fas fa-heart text-2xl cursor-pointer icon-hover" />
+      <a href="/Wishlist">
+        <i className="fas fa-heart text-2xl cursor-pointer icon-hover" />
+      </a>
       <div className="relative cart-dropdown">
         <a href="/Cart">
           <i className="fas fa-shopping-bag text-2xl cursor-pointer icon-hover" />
